@@ -1,0 +1,312 @@
+:root {
+  --pri: #f8f4e1;
+  --sec: #371a08;
+  --tri1: #f1b126;
+  --tri2: #6d4b18;
+  --red: red;
+}
+
+@font-face {
+  font-family: aeonik;
+  src: url(./fonts/fonnts.com-Aeonik-Regular.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: aeonik;
+  src: url(./fonts/fonnts.com-Aeonik-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+  font-weight: 500;
+  color: var(--pri);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: var(--tri2);
+}
+
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  position: absolute;
+}
+
+.elem {
+  background-color: #feba17;
+  border-radius: 10px;
+  height: 300px;
+  width: 260px;
+  font-size: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgb(9, 9, 9);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+  font-weight: 500;
+  font-size: 25px;
+  mix-blend-mode: difference;
+  white-space: nowrap;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 20px;
+  display: none;
+  position: absolute;
+}
+
+.back {
+  position: absolute;
+  right: 2%;
+  background-color: var(--red);
+  border-radius: 10px;
+  padding: 12px 20px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back:active {
+  scale: 0.97;
+}
+
+.todo-list-fullpage h2 {
+  font-size: 60px;
+}
+
+.todo-list-fullpage .todo-container {
+  height: 70%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .addTask {
+  width: 33%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.todo-container .addTask form input#task-input {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.todo-container .addTask form textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.todo-container .addTask form button {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.todo-container .addTask form button:active {
+  scale: 0.97;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+  width: 65%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-y: auto;
+}
+.todo-list-fullpage .todo-container .allTask::-webkit-scrollbar {
+  display: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--pri);
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task h5 {
+  color: var(--sec);
+  font-size: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+}
+
+.task h5 span {
+  color: var(--pri);
+  background-color: var(--red);
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+.task h5 span.true {
+  opacity: 1;
+}
+.task h5 span.false {
+  opacity: 0;
+}
+
+.task .btns{
+  display: flex;
+  gap: 10px;
+}
+.task .delete {
+  padding: 15px 30px;
+  color: var(--pri);
+  background-color: crimson;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+.task button:active{
+  scale: 0.95;
+}
+
+.task .mark-complete{
+    padding: 15px 30px;
+  color: var(--pri);
+  background-color: rgb(10, 201, 77);
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+.mark-imp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 30px;
+}
+
+.mark-imp input {
+  scale: 2;
+}
+
+.mark-imp label {
+  font-size: 20px;
+}
+
+.task details summary {
+  list-style: none; 
+  cursor: pointer;
+  outline: none;
+  width: fit-content;
+  display: inline-block; 
+}
+
+.task details summary::-webkit-details-marker {
+  display: none;
+}
+
+.task details summary i {
+  font-size: 24px; 
+  color: var(--sec);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.task details[open] summary i {
+  transform: rotate(180deg);
+}
+
+.task-details-text {
+  color: var(--sec);
+  font-size: 16px; 
+  margin-top: 10px;
+}
