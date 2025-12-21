@@ -58,7 +58,6 @@ section.allElems {
 }
 
 .elem {
-  background-color: #feba17;
   border-radius: 10px;
   height: 300px;
   width: 260px;
@@ -235,7 +234,7 @@ section.allElems {
   opacity: 0;
 }
 
-.task .btns{
+.task .btns {
   display: flex;
   gap: 10px;
 }
@@ -249,12 +248,12 @@ section.allElems {
   font-weight: 600;
   transition: all 0.25s;
 }
-.task button:active{
+.task button:active {
   scale: 0.95;
 }
 
-.task .mark-complete{
-    padding: 15px 30px;
+.task .mark-complete {
+  padding: 15px 30px;
   color: var(--pri);
   background-color: rgb(10, 201, 77);
   font-size: 18px;
@@ -283,11 +282,11 @@ section.allElems {
 }
 
 .task details summary {
-  list-style: none; 
+  list-style: none;
   cursor: pointer;
   outline: none;
   width: fit-content;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .task details summary::-webkit-details-marker {
@@ -295,7 +294,7 @@ section.allElems {
 }
 
 .task details summary i {
-  font-size: 24px; 
+  font-size: 24px;
   color: var(--sec);
   transition: transform 0.3s ease;
   display: inline-block;
@@ -307,6 +306,145 @@ section.allElems {
 
 .task-details-text {
   color: var(--sec);
-  font-size: 16px; 
+  font-size: 16px;
   margin-top: 10px;
+}
+
+/*Daily Planner*/
+.daily-planner-fullpage h2 {
+  font-size: 70px;
+}
+
+.daily-planner-fullpage .day-planner {
+  background-color: var(--tri2);
+  height: 85%;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.daily-planner-fullpage .day-planner::-webkit-scrollbar {
+  display: none;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  font-size: 18px;
+  color: var(--tri1);
+}
+
+.day-planner .day-planner-time input {
+  padding: 20px 40px;
+  width: 100%;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  font-size: 32px;
+  padding-top: 34px;
+  outline: none;
+}
+
+/*Motivational Quote*/
+.motivation-fullPage-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motivational-fullpage .motivation-container {
+  height: 400px;
+  width: 80%;
+  border-radius: 50px;
+  position: relative;
+}
+
+.motivational-fullpage .motivation-container::after {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--tri1);
+  border-radius: 50px;
+  scale: 1.125;
+  z-index: 8;
+  filter: blur(180px);
+}
+
+.motivational-fullpage .motivation-container .motivational-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  background-color: var(--tri1);
+  padding: 17px;
+  border-radius: 30px;
+}
+
+.motivation-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.motivation-1 h2 {
+  background-color: var(--tri2);
+  width: fit-content;
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.motivation-2 {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.motivation-2 h2 {
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--sec);
+}
+
+.motivation-3 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.motivation-3 h2 {
+  background-color: var(--tri2);
+  width: fit-content;
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.motivational-fullpage .motivation-container .motivational-wrapper img {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  opacity: 0.2;
+  height: 100px;
 }
