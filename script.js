@@ -203,7 +203,7 @@ function weatherFunctionality() {
   let properLocation = document.querySelector(".header1 h4");
 
   async function weatherAPICall(query) {
-    let apikey = "ccb1dab677f948cf9d8123236252212";
+    const apikey = CONFIG.API_KEY;
     let location = query || "Bhubaneswar";
 
     try {
