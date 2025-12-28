@@ -189,7 +189,7 @@ header .header2 h2 {
 }
 
 .is-done {
-  opacity: 0.5;
+  opacity: 0.6;
   text-decoration: line-through;
   text-decoration-color: red;
   text-decoration-thickness: 2px;
