@@ -191,7 +191,7 @@ header .header2 h2 {
 .is-done {
   opacity: 0.6;
   text-decoration: line-through;
-  text-decoration-color: red;
+  text-decoration-color: rgba(220, 5, 5, 0.907);
   text-decoration-thickness: 2px;
 }
 
